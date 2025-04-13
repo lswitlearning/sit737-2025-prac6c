@@ -35,7 +35,7 @@ npm install
 
     To check the currently active context: `kubectl config current-context`  
 &nbsp;
-2. Build the Docker Image
+2. Build the Docker Image  
  -`docker build -t myapp-k8s .`
 &nbsp;
 3. Create Kubernetes Deployment
@@ -43,27 +43,27 @@ npm install
  -Apply the file `kubectl apply -f deployment.yaml`  
  -Check pods: `kubectl get pods`
  &nbsp;
-4. Create Kubernetes Service
- -create service.yaml file
- -Apply the file : `kubectl apply -f service.yaml`
- -Verify service: `kubectl get svc`
+4. Create Kubernetes Service  
+ -create service.yaml file  
+ -Apply the file : `kubectl apply -f service.yaml`  
+ -Verify service: `kubectl get svc`  
  &nbsp;
 
-5. Use the kubectl port-forward command to forward traffic from a local port to the Kubernetes service.
-`kubectl port-forward service/myapp-service 8888:80 `
+5. Use the kubectl port-forward command to forward traffic from a local port to the Kubernetes service.  
+`kubectl port-forward service/myapp-service 8888:80 `  
  &nbsp;
-6. Access the Application
+6. Access the Application  
  http://localhost:8888
  &nbsp;
 7. Updating the application (modifying the code)
  &nbsp;
-8. Build a new Docker Image witha a new version tag
+8. Build a new Docker Image witha a new version tag  
  -`docker build -t myapp-k8s:v2 .`
  &nbsp;
-9. Update the deployment yaml
+9. Update the deployment yaml  
 change the Image: From `myapp-k8s` -> `myapp-k8s:v2`
  &nbsp;
-10. Reapply the deployment to trigger an update
+10. Reapply the deployment to trigger an update  
  -`kubectl apply -f deployment.yaml`
  &nbsp;
 11. Forward traffic to local port 8888, verify the Application  
