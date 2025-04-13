@@ -28,7 +28,7 @@ git clone https://github.com/lswitlearning/sit737-2025-prac6c.git
 npm install
 ```
 
-### Health Check & Restart
+### Instructions
 
 1. Setup the Kubernetes Cluster (Docker Desktop (local K8s))
     Enter Docker Desktop setting, enable Kubernetes  
